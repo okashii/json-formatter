@@ -396,7 +396,6 @@
 
   // Listen for requests from content pages wanting to set up a port
     chrome.extension.onConnect.addListener(function(port) {
-
       if (port.name !== 'jf') {
         console.log('JSON Formatter error - unknown port name '+port.name, port) ;
         return ;
@@ -404,8 +403,7 @@
 
       port.onMessage.addListener(function(msg) {
         var jsonpFunctionName = null,
-            validJsonText
-        ;
+            validJsonText;
 
         if (msg.type === 'SENDING TEXT') {
           // Try to parse as JSON
@@ -494,6 +492,45 @@
 
             // Disconnect
               port.disconnect() ;
+        } else if(msg.type === 'FILTERING TEXT'){
+          // Try to parse as JSON
+          var obj, text = msg.text;
+
+          // Strip any leading garbage, such as a 'while(1);'
+          var strippedText = text.substring(firstJSONCharIndex(text)),
+          validJsonText = strippedText;
+          obj = JSON.parse(strippedText);
+          var filter = msg.filter.trim();
+          if('' !== filter){
+            if(typeof obj === 'array'){
+              obj = obj[parseInt(filter)];
+            }else{
+              obj = obj[filter];
+            }
+            validJsonText = JSON.stringify(obj);
+          }
+          
+          
+          // If still running, we now have obj, which is valid JSON.
+
+          // Ensure it's not a number or string (technically valid JSON, but no point prettifying it)
+          if (typeof obj !== 'object' && typeof obj !== 'array') {
+            port.postMessage(['NOT JSON', 'technically JSON but not an object or array']);
+            port.disconnect();
+            return;
+          }
+
+          // And send it the message to confirm that we're now formatting (so it can show a spinner)
+          port.postMessage(['FILTERING' /*, JSON.stringify(localStorage)*/]);
+
+          // Do formatting
+          var html = jsonObjToHTML(obj, jsonpFunctionName);
+
+          // Post the HTML string to the content script
+          port.postMessage(['FILTERED', html, validJsonText]);
+
+          // Disconnect
+          port.disconnect();
         }
       });
     });

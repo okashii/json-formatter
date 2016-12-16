@@ -81,7 +81,7 @@
 
             jfStyleEl.insertAdjacentHTML(
               'beforeend',
-              'body{-webkit-user-select:text;overflow-y:scroll !important;margin:0;position:relative}#optionBar{-webkit-user-select:none;display:block;position:absolute;top:9px;right:17px}#buttonFormatted,#buttonPlain{-webkit-border-radius:2px;-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.1);-webkit-user-select:none;background:-webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);border:1px solid #aaa;color:#444;font-size:12px;margin-bottom:0px;min-width:4em;padding:3px 0;position:relative;z-index:10;display:inline-block;width:80px;text-shadow:1px 1px rgba(255,255,255,0.3)}#buttonFormatted{margin-left:0;border-top-left-radius:0;border-bottom-left-radius:0}#buttonPlain{margin-right:0;border-top-right-radius:0;border-bottom-right-radius:0;border-right:none}#buttonFormatted:hover,#buttonPlain:hover{-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.2);background:#ebebeb -webkit-linear-gradient(#fefefe, #f8f8f8 40%, #e9e9e9);border-color:#999;color:#222}#buttonFormatted:active,#buttonPlain:active{-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.2);background:#ebebeb -webkit-linear-gradient(#f4f4f4, #efefef 40%, #dcdcdc);color:#333}#buttonFormatted.selected,#buttonPlain.selected{-webkit-box-shadow:inset 0px 1px 5px rgba(0,0,0,0.2);background:#ebebeb -webkit-linear-gradient(#e4e4e4, #dfdfdf 40%, #dcdcdc);color:#333}#buttonFormatted:focus,#buttonPlain:focus{outline:0}#jsonpOpener,#jsonpCloser{padding:4px 0 0 8px;color:#000;margin-bottom:-6px}#jsonpCloser{margin-top:0}#formattedJson{padding-left:28px;padding-top:6px}pre{padding:36px 5px 5px 5px}.kvov{display:block;padding-left:20px;margin-left:-20px;position:relative}.collapsed{white-space:nowrap}.collapsed>.blockInner{display:none}.collapsed>.ell:after{content:"…";font-weight:bold}.collapsed>.ell{margin:0 4px;color:#888}.collapsed .kvov{display:inline}.e{width:20px;height:18px;display:block;position:absolute;left:-2px;top:1px;z-index:5;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD1JREFUeNpiYGBgOADE%2F3Hgw0DM4IRHgSsDFOzFInmMAQnY49ONzZRjDFiADT7dMLALiE8y4AGW6LoBAgwAuIkf%2F%2FB7O9sAAAAASUVORK5CYII%3D");background-repeat:no-repeat;background-position:center center;display:block;opacity:0.15}.collapsed>.e{-webkit-transform:rotate(-90deg);width:18px;height:20px;left:0px;top:0px}.e:hover{opacity:0.35}.e:active{opacity:0.5}.collapsed .kvov .e{display:none}.blockInner{display:block;padding-left:24px;border-left:1px dotted #bbb;margin-left:2px}#formattedJson,#jsonpOpener,#jsonpCloser{color:#333;font:13px/18px monospace}#formattedJson{color:#444}.b{font-weight:bold}.s{color:#0B7500;word-wrap:break-word}a:link,a:visited{text-decoration:none;color:inherit}a:hover,a:active{text-decoration:underline;color:#050}.bl,.nl,.n{font-weight:bold;color:#1A01CC}.k{color:#000}#formattingMsg{font:13px "Lucida Grande","Segoe UI","Tahoma";padding:10px 0 0 8px;margin:0;color:#333}#formattingMsg>svg{margin:0 7px;position:relative;top:1px}[hidden]{display:none !important}span{white-space:pre-wrap}@-webkit-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}#spinner{-webkit-animation:spin 2s 0 infinite}*{-webkit-font-smoothing:antialiased}'
+              'body{-webkit-user-select:text;overflow-y:scroll !important;margin:0;position:relative}#optionBar{-webkit-user-select:none;display:block;position:absolute;top:9px;right:17px}#buttonFormatted,#buttonPlain,#buttonFilter{-webkit-border-radius:2px;-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.1);-webkit-user-select:none;background:-webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);border:1px solid #aaa;color:#444;font-size:12px;margin-bottom:0px;min-width:4em;padding:3px 0;position:relative;z-index:10;display:inline-block;width:80px;text-shadow:1px 1px rgba(255,255,255,0.3)}#buttonFormatted,#buttonFilter{margin-left:0;border-top-left-radius:0;border-bottom-left-radius:0}#buttonPlain{margin-right:0;border-top-right-radius:0;border-bottom-right-radius:0;border-right:none}#buttonFormatted:hover,#buttonPlain:hover,#buttonFilter:hover{-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.2);background:#ebebeb -webkit-linear-gradient(#fefefe, #f8f8f8 40%, #e9e9e9);border-color:#999;color:#222}#buttonFormatted:active,#buttonPlain:active,#buttonFilter:active{-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.2);background:#ebebeb -webkit-linear-gradient(#f4f4f4, #efefef 40%, #dcdcdc);color:#333}#buttonFormatted.selected,#buttonPlain.selected,#buttonFilter:selected{-webkit-box-shadow:inset 0px 1px 5px rgba(0,0,0,0.2);background:#ebebeb -webkit-linear-gradient(#e4e4e4, #dfdfdf 40%, #dcdcdc);color:#333}#buttonFormatted:focus,#buttonPlain:focus,#buttonFilter:focus{outline:0}#jsonpOpener,#jsonpCloser{padding:4px 0 0 8px;color:#000;margin-bottom:-6px}#jsonpCloser{margin-top:0}#formattedJson{padding-left:28px;padding-top:6px}pre{padding:36px 5px 5px 5px}.kvov{display:block;padding-left:20px;margin-left:-20px;position:relative}.collapsed{white-space:nowrap}.collapsed>.blockInner{display:none}.collapsed>.ell:after{content:"…";font-weight:bold}.collapsed>.ell{margin:0 4px;color:#888}.collapsed .kvov{display:inline}.e{width:20px;height:18px;display:block;position:absolute;left:-2px;top:1px;z-index:5;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD1JREFUeNpiYGBgOADE%2F3Hgw0DM4IRHgSsDFOzFInmMAQnY49ONzZRjDFiADT7dMLALiE8y4AGW6LoBAgwAuIkf%2F%2FB7O9sAAAAASUVORK5CYII%3D");background-repeat:no-repeat;background-position:center center;display:block;opacity:0.15}.collapsed>.e{-webkit-transform:rotate(-90deg);width:18px;height:20px;left:0px;top:0px}.e:hover{opacity:0.35}.e:active{opacity:0.5}.collapsed .kvov .e{display:none}.blockInner{display:block;padding-left:24px;border-left:1px dotted #bbb;margin-left:2px}#formattedJson,#jsonpOpener,#jsonpCloser{color:#333;font:13px/18px monospace}#formattedJson{color:#444}.b{font-weight:bold}.s{color:#0B7500;word-wrap:break-word}a:link,a:visited{text-decoration:none;color:inherit}a:hover,a:active{text-decoration:underline;color:#050}.bl,.nl,.n{font-weight:bold;color:#1A01CC}.k{color:#000}#formattingMsg{font:13px "Lucida Grande","Segoe UI","Tahoma";padding:10px 0 0 8px;margin:0;color:#333}#formattingMsg>svg{margin:0 7px;position:relative;top:1px}[hidden]{display:none !important}span{white-space:pre-wrap}@-webkit-keyframes spin{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}#spinner{-webkit-animation:spin 2s 0 infinite}*{-webkit-font-smoothing:antialiased}'
             ) ;
   
             // Add custom font name if set - FROM FUTURE
@@ -123,24 +123,33 @@
           
           // Create toggleFormat button
             var buttonPlain = document.createElement('button'),
-              buttonFormatted = document.createElement('button') ;
+              buttonFormatted = document.createElement('button'),
+              buttonFilter = document.createElement('button'),
+              inputFilter = document.createElement('input');
             buttonPlain.id = 'buttonPlain' ;
             buttonPlain.innerText = 'Raw' ;
             buttonFormatted.id = 'buttonFormatted' ;
             buttonFormatted.innerText = 'Parsed' ;
             buttonFormatted.classList.add('selected') ;
+            buttonFilter.id = 'buttonFilter' ;
+            buttonFilter.innerText = 'Filter' ;
+            inputFilter.id = 'inputFilter';
+            inputFilter.type = 'text';
+            inputFilter.style='border: 1px solid #aaa;font-size: 12px;margin-bottom: 0px;min-width: 4em;padding: 3px 0;position: relative;z-index: 10;display: inline-block;width: 80px;text-shadow: 1px 1px rgba(255,255,255,0.3);';
             
-            var plainOn = false ;
+            var plainOn = 'formatted' ;// plain/formatted/filter
             buttonPlain.addEventListener(
               'click',
               function () {
+                console.log(plainOn);
                 // When plain button clicked...
-                if (!plainOn) {
-                  plainOn = true ;
+                if (plainOn != 'plain') {
+                  plainOn = 'plain' ;
                   pre.hidden = false ;
                   jfContent.hidden = true ;
 
                   buttonFormatted.classList.remove('selected') ;
+                  buttonFilter.classList.remove('selected') ;
                   buttonPlain.classList.add('selected') ;
                 }
               },
@@ -151,14 +160,29 @@
               'click',
               function () {
                 // When formatted button clicked...
-                if (plainOn) {
-                  plainOn = false ;
+                if (plainOn != 'formatted') {
+                  plainOn = 'formatted' ;
                   pre.hidden = true ;
                   jfContent.hidden = false ;
 
-                  buttonFormatted.classList.add('selected') ;
+                  buttonFilter.classList.remove('selected') ;
                   buttonPlain.classList.remove('selected') ;
+                  buttonFormatted.classList.add('selected') ;
                 }
+              },
+              false
+            ) ;
+            // add event for filter button —— mdf by blackwhite
+            buttonFilter.addEventListener(
+              'click',
+              function () {
+                plainOn = 'filter';
+                var filterValue = inputFilter.value;
+                filterAction(filterValue);
+
+                buttonPlain.classList.remove('selected');
+                buttonFormatted.classList.remove('selected');
+                buttonFilter.classList.add('selected');
               },
               false
             ) ;
@@ -166,6 +190,8 @@
             // Put it in optionBar
               optionBar.appendChild(buttonPlain) ;
               optionBar.appendChild(buttonFormatted) ;
+              optionBar.appendChild(buttonFilter) ;
+              optionBar.appendChild(inputFilter);
 
           // Attach event handlers
             document.addEventListener(
@@ -194,20 +220,65 @@
 
           // Export parsed JSON for easy access in console
             setTimeout(function () {
-              var script = document.createElement("script") ;
+              var script = document.createElement("script");
               script.innerHTML = 'window.json = ' + msg[2] + ';' ;
+              window.filterJson = window.json = msg[2];
               document.head.appendChild(script) ;
               console.log('JSON Formatter: Type "json" to inspect.') ;
             }, 100) ;
 
-          break ;
-        
+          break;
         default :
           throw new Error('Message not understood: ' + msg[0]) ;
       }
     });
   
     // console.timeEnd('established port') ;
+
+  function filterAction(filterStr) {
+    // get json string from head  —— mdf by blackwhite
+    // var oriJsonStr = document.head.getElementsByTagName('script')[0].innerHTML;
+    // var jsonStrStart = oriJsonStr.indexOf('{');
+    // oriJsonStr = oriJsonStr.substr(jsonStrStart).replace(';', '');
+    if(filterStr.trim() !== ''){
+      var oriJsonStr = window.filterJson;
+    }else{
+      var oriJsonStr = window.json;
+    }
+    port = chrome.extension.connect({ name: 'jf' });
+    port.onMessage.addListener( function (msg) {
+      switch (msg[0]) {
+        case 'NOT JSON':
+          pre.hidden = false;
+          jfContent.hidden = true ;
+          // console.log('Unhidden the PRE') ;
+          pre.innerHTML = msg[1];
+          //document.body.removeChild(jfContent);
+          exitedNotJsonTime = +(new Date());
+          break;
+        case 'FILTERING':
+          console.log('reveice FILTERING');
+          break;
+        case 'FILTERED':
+          console.log('reveice FILTERED');
+          // Insert HTML content
+          jfContent.innerHTML = msg[1];
+          pre.innerHTML = window.filterJson = msg[2];
+          pre.hidden = true ;
+          jfContent.hidden = false ;
+          port.disconnect();
+          break;
+        default:
+          throw new Error('Message not understood: ' + msg[0]);
+      }
+    });
+    port.postMessage({
+      type: "FILTERING TEXT",
+      text: oriJsonStr,
+      length: oriJsonStr.length,
+      filter: filterStr
+    });
+  }
 
 
   function ready () {
@@ -217,7 +288,7 @@
     // First, check if it's a PRE and exit if not
       var bodyChildren = document.body.childNodes ;
       pre = bodyChildren[0] ;
-      var jsonLength = (pre && pre.innerText || "").length ;
+      var jsonLength = (pre && pre.innerText || "").length;
       if (
         bodyChildren.length !== 1 ||
         pre.tagName !== 'PRE' ||
@@ -234,7 +305,6 @@
       else {
         // This is a 'plain text' page (just a body with one PRE child).
         // It might be JSON/JSONP, or just some other kind of plain text (eg CSS).
-        
         // Hide the PRE immediately (until we know what to do, to prevent FOUC)
           pre.hidden = true ;
           //console.log('It is text; hidden pre at ') ;
